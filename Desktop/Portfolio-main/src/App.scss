@@ -1,0 +1,38 @@
+// Define the mixin first
+@mixin mobile {
+    @media (max-width: 738px) {
+        @content;
+    }
+}
+
+// Rest of the styles
+html {
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    background-color: #0c0c1d;
+    color: lightgrey;
+    
+    @include mobile {
+        width: 605px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: center;
+}

@@ -1,0 +1,123 @@
+@import "../../../App.scss";
+.cols {
+    display: flex;
+    justify-content: space-between; 
+    gap: 30px;
+    margin-bottom: 30px;
+
+    @include mobile{
+        gap: 20px;
+    }
+  }
+  
+  button {
+    background: transparent;
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 1em;
+    color: white;
+    font-weight: 700;
+    border: 2px solid rgba(255, 255, 255, 0.8); 
+    cursor: pointer;
+  }
+  .myCard {
+    width: 170px;
+    height: 204px;
+    perspective: 1000px;
+
+    @include mobile{
+        width: 100px;
+        height: 150px;
+    }
+  }
+  
+  .title {
+    font-size: 1.2em;
+    margin: 0;
+
+    @include mobile{
+        font-size: x-small;
+    }
+  }
+  
+  .innerCard {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .myCard:hover .innerCard {
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide,
+  .backSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+  }
+  
+  .frontSide,
+  .frontSide::before {
+    background: linear-gradient(
+      43deg,
+      rgb(65, 88, 208),
+      rgb(200, 80, 192),
+      rgb(255, 204, 112)
+    );
+  }
+  
+  .backSide,
+  .backSide::before {
+    background-image: linear-gradient(160deg, #0093e9, #80d0c7);
+  }
+  
+  .backSide {
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide::before,
+  .backSide::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 110%;
+    height: 110%;
+    z-index: -1;
+    border-radius: 1em;
+    filter: blur(20px);
+    animation: animate 3s linear infinite;
+    background: linear-gradient(
+      43deg,
+      rgb(65, 88, 208),
+      rgb(200, 80, 192),
+      rgb(255, 204, 112)
+    );
+  }
+  
+  @keyframes animate {
+    0% {
+      opacity: 0.3;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.3;
+    }
+  }
+  
