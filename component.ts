@@ -15,9 +15,9 @@ const components = {
   },
   background: {
     none: false,
-    gradient: true,
+    gradient: false,
     eyes: false,
-    grid: false,
+    grids: true,
   },
 };
 export default components;

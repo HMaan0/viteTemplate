@@ -10,7 +10,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         theme_bg_light: "#ffffff",
-        theme_bg_dark: "black",
+        theme_bg_dark: "blue",
         primary_dark: "#212121",
         primary_light: "white",
         theme_secondary: "#9e2e3b",

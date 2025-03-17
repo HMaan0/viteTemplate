@@ -9,6 +9,7 @@ import Projects from "./sections/Projects";
 import Work from "./sections/Work";
 import data from "../data";
 import components from "../component";
+import GithubInfo from "./components/GithubInfo";
 const App = () => {
   return (
     <>
@@ -25,7 +26,6 @@ const App = () => {
             {data.Github.github_username.length > 0 && (
               <div className="mt-64">
                 <Card key={0}>
-                  {/* @ts-expect-error Server Component */}
                   <GithubInfo></GithubInfo>
                 </Card>
               </div>

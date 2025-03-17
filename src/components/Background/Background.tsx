@@ -8,7 +8,7 @@ const Background = () => {
     <>
       {components.background.gradient && <Gradient />}
       {components.background.eyes && <Eyes />}
-      {components.background.grid && <GridPatternLinearGradient />}
+      {components.background.grids && <GridPatternLinearGradient />}
     </>
   );
 };
