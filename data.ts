@@ -1,7 +1,7 @@
 const data = {
   Hero: {
     name: "Name",
-    des: "enter the text from right side such as",
+    des: "Enter the text from right side such as:",
     words: ["Bio", "About", "Work experience", "Projects"],
   },
   Github: {
